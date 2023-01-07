@@ -1,14 +1,16 @@
 package source_230107.s5;
 
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class S5_1343 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println(calculate(br.readLine()));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        bw.write(calculate(br.readLine()));
+        bw.flush();
+        bw.close();
+        br.close();
 
     }
     private static String calculate(String s) {
